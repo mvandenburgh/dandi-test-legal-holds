@@ -23,3 +23,7 @@ module "dandi_s3_bucket" {
     aws.project = aws
   }
 }
+
+resource "aws_s3_bucket_object_lock_configuration" "this" {
+  bucket = module.dandi_s3_bucket.bucket_name
+}
