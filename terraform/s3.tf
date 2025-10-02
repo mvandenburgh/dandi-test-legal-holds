@@ -9,7 +9,7 @@ resource "aws_iam_access_key" "this" {
 # Based on 
 # https://github.com/dandi/dandi-infrastructure/blob/master/terraform/sponsored_bucket.tf
 module "dandi_s3_bucket" {
-  source = "git::https://github.com/dandi/dandi-infrastructure//terraform/modules/dandiset_bucket"
+  source = "git::https://github.com/dandi/dandi-infrastructure//terraform/modules/dandiset_bucket?ref=add-s3-public-access-block"
 
   bucket_name                           = "dandi-test-legal-holds"
   public                                = true
